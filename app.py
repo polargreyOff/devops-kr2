@@ -4,6 +4,8 @@ import socket
 import redis
 from flask import Flask, request
 
+# KR2: Kartsev
+
 app = Flask(__name__)
 
 r = redis.Redis(
@@ -34,3 +36,4 @@ def whoami():
         f"client: {request.headers.get('X-Real-IP', 'none')}\n"
         f"host: {request.headers.get('Host', 'none')}\n"
     )
+    
